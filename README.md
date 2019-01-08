@@ -18,8 +18,7 @@ Testing Instructions
 --------------------
 
 The program should:
-1. Take the input file path as input argument
-Use following example as test file. Example:
+1. Take the input file path as input argument. Use following example as test file. Example:
 ```
 {"id":"scsmbstgra", "state":"STARTED", "type":"APPLICATION_LOG",
 "host":"12345", "timestamp":1491377495212}
@@ -32,12 +31,12 @@ Use following example as test file. Example:
 ```
 
 2. Flag any long events that take longer than 4ms with a column in the database called "alert"
-Write the found event details to file-based HSQLDB `eventdb` in the working folder
-The application should a new table if necessary and enter the following values:
-Event id
-Event duration
-Type and Host if applicable
-"alert" true is applicable
+3. Write found event details to file-based HSQLDB `eventdb` in the working folder
+4. The application should create a new table if necessary and enter the following values:
+    a. Event id
+    b. Event duration
+    c. Type and Host if applicable
+    d. "alert" set to True if applicable
 
 In the example above, the event scsmbstgrb duration is 1401377495216 - 1491377495213 = 3ms
 The longest event is scsmbstgrc (1491377495218 - 1491377495210 = 8ms)
